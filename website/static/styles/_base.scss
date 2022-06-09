@@ -1,0 +1,23 @@
+/*------------------------------------------------------------------------------
+ * BASE
+ * ---------------------------------------------------------------------------*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font: 400 16px $font-sans;
+  color: $text-color;
+  background: $bg-color;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2 {
+  font-weight: 700;
+}
+
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.3rem; }
+
+p { line-height: 1.6rem;}

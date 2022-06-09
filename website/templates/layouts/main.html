@@ -1,3 +1,4 @@
+{% load compress %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -5,16 +6,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Django Base Project</title>
-    <script src="{% static 'scripts/main.js' %}" defer></script>
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    {% compress css %}
+    <link rel="stylesheet" href="{% static 'styles/main.scss' %}" type="text/x-scss">
+    {% endcompress %}
+    {% compress js %}
+    <script src="{% static 'scripts/main.js' %}" type="text/es-browserslist" defer></script>
+    {% endcompress %}
 </head>
 <body>
-    <main class="container">
     {% block content %}
     {% endblock %}
-    </main>
+
+    {% block scripts %}
+    {% endblock %}
 </body>
 </html>

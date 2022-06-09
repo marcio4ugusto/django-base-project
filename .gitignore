@@ -1,17 +1,21 @@
-# Django #
+# Django
 *.log
 *.pot
 *.pyc
 __pycache__
 db.sqlite3
 media
+static/CACHE
 
-# Backup files #
+# Backup files
 *.bak
 
-# Python #
+# Python
 *.py[cod]
 *$py.class
+
+# Nodejs
+/node_modules
 
 # Installer logs
 pip-log.txt
@@ -37,3 +41,27 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+# Editors directories
+.history
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sublime-*
+*.vscode/*
+
+# System files
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+*.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Trash-*

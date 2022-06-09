@@ -1,0 +1,19 @@
+{
+  "name": "django-base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "browserslist": "> 2%, last 2 versions, Firefox ESR, not dead",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0"
+  }
+}

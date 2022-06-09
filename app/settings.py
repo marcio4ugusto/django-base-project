@@ -31,13 +31,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'website',
     # 'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'website',
+    'compressor',
 ]
 
 MIDDLEWARE = [
@@ -113,10 +114,29 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
+# Static files (CSS, JavaScript, Images) and compressor
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
+# https://django-compressor.readthedocs.io/en/stable/index.html
 
-STATIC_URL = 'assets/'
+STATIC_URL = 'static/'
+
+STATIC_ROOT = 'static/'
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+)
+
+COMPRESS_ENABLED = True
+
+COMPRESS_OFFLINE = False
+
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'pysassc {infile} {outfile}'),
+    ('text/es-browserslist', './node_modules/.bin/browserify {infile} -t babelify --outfile {outfile}'),
+)
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

@@ -1,0 +1,21 @@
+@import "_reset";
+@import "_variables";
+@import "_base";
+
+
+/*------------------------------------------------------------------------------
+ * LAYOUT
+ * ---------------------------------------------------------------------------*/
+
+.container {
+  width: 420px;
+  margin: 180px auto 0;
+}
+
+header {
+  margin-bottom: 1rem;
+}
+
+footer {
+  margin-top: 1rem;
+}

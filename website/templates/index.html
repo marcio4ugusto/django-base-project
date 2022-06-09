@@ -1,19 +1,21 @@
 {% extends 'layouts/main.html' %}
 
 {% block content %}
-<header>
-    <h1>Hello,</h1>
-    <p>I wish you use this to build an amazing project!</p>
-    <p><a href="{% url 'blank' %}">Blank page</a> example.</p>
-</header>
-<section>
-    <h2>Features</h2>
-    <ul>
-        <li>- <span>[x]</span> Django framework</li>
-        <li>- <span>[x]</span> CSS and JS via Django statifiles</li>
-    </ul>
-</section>
-<footer>
-    <p>Licensed under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT license</a>.</p>
-</footer>
+<div class="container">
+    <header>
+        <h1>Hello,</h1>
+        <p>I wish you use this to build an amazing project!</p>
+        <p><a href="{% url 'blank' %}">Blank page</a> example.</p>
+    </header>
+    <section>
+        <h2>Features</h2>
+        <ul>
+            <li>- <span>[x]</span> Django framework</li>
+            <li>- <span>[x]</span> CSS and JS via Django statifiles</li>
+        </ul>
+    </section>
+    <footer>
+        <p>Licensed under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT license</a>.</p>
+    </footer>
+</div>
 {% endblock %}
