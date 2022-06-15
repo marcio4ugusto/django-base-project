@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 
 def landing(request):
-    return render(request, "index.html")
+    return render(request, "landing.html")
 
-def blank(request):
-    return render(request, "blank.html")
+def features(request):
+    return render(request, "features.html")

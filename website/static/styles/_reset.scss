@@ -13,11 +13,11 @@ ul {
 }
 
 a {
-  color: #15803D;
+  color: $destak;
 }
 
 a:hover, a:focus {
-  color: #16A34A;
+  color: darken($destak, 10);
 }
 
 img {

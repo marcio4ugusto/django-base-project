@@ -1,5 +1,6 @@
 {% load compress %}
 {% load static %}
+{% load miscellaneous %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,5 +20,8 @@
 
     {% block scripts %}
     {% endblock %}
+    <footer>
+        <p>©{% year %} Licensed under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT license</a>.</p>
+    </footer>
 </body>
 </html>

@@ -14,10 +14,10 @@ body {
 }
 
 h1, h2 {
-  font-weight: 700;
+  font-weight: 900;
 }
 
-h1 { font-size: 1.6rem; }
-h2 { font-size: 1.3rem; }
+h1 { margin-bottom: 1rem; font-size: 6rem; }
+h2 { margin-bottom: 0.5rem; font-size: 4rem; color: $text-gray; }
 
 p { line-height: 1.6rem;}
