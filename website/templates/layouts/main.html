@@ -11,17 +11,16 @@
     <link rel="stylesheet" href="{% static 'styles/main.scss' %}" type="text/x-scss">
     {% endcompress %}
     {% compress js %}
-    <script src="{% static 'scripts/main.js' %}" type="text/es-browserslist" defer></script>
+    <script src="{% static 'scripts/main.js' %}" type="text/es-next" defer></script>
     {% endcompress %}
 </head>
 <body>
     {% block content %}
     {% endblock %}
-
-    {% block scripts %}
-    {% endblock %}
     <footer>
         <p>©{% year %} Licensed under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT license</a>.</p>
     </footer>
+    {% block scripts %}
+    {% endblock %}
 </body>
 </html>

@@ -134,7 +134,7 @@ COMPRESS_OFFLINE = False
 
 COMPRESS_PRECOMPILERS = (
     ('text/x-scss', 'pysassc {infile} {outfile}'),
-    ('text/es-browserslist', './node_modules/.bin/browserify {infile} -t babelify --outfile {outfile}'),
+    ('text/es-next', './node_modules/.bin/esbuild {infile} --bundle --minify --sourcemap --target=chrome58,firefox57,edge16,safari11 --outfile={outfile}'),
 )
 
 
