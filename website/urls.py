@@ -1,8 +1,8 @@
 from django.urls import path, include
-from website.views import landing, features
+from website.views import default, app
 
 
 urlpatterns = [
-    path('', landing, name="landing"),
-    path('features/', features, name="features"),
+    path('', default, name="default"),
+    path('app/', app, name="app"),
 ]

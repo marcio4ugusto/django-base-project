@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
 
-def landing(request):
-    return render(request, "landing.html")
+def default(request):
+    return render(request, "default.html")
 
-def features(request):
-    return render(request, "features.html")
+def app(request):
+    return render(request, "app.html")

@@ -13,7 +13,7 @@ trim_trailing_whitespace = true
 [*.md]
 trim_trailing_whitespace = false
 
-[*.{js,jsx,yml,yaml}]
+[*.{js,jsx,ts,tsx,yml,yaml}]
 indent_size = 2
 
 [docker-compose.yml]

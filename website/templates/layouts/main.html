@@ -1,25 +1,18 @@
 {% load compress %}
 {% load static %}
-{% load miscellaneous %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django Base Project</title>
+    <title>Django - Server first architecture</title>
     {% compress css %}
-    <link rel="stylesheet" href="{% static 'styles/main.scss' %}" type="text/x-scss">
-    {% endcompress %}
-    {% compress js %}
-    <script src="{% static 'scripts/main.js' %}" type="text/es-next" defer></script>
+    <link rel="stylesheet" href="{% static 'styles/styles.scss' %}" type="text/x-scss">
     {% endcompress %}
 </head>
 <body>
     {% block content %}
     {% endblock %}
-    <footer>
-        <p>©{% year %} Licensed under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT license</a>.</p>
-    </footer>
     {% block scripts %}
     {% endblock %}
 </body>

@@ -139,14 +139,27 @@ STATICFILES_FINDERS = (
 
 COMPRESS_ENABLED = True
 
-# Don't forget to run compressor command on production
+# ALERT: Don't forget to run compressor command on production
 COMPRESS_OFFLINE = False if env('DJANGO_DEVELOPMENT') else True
 
-COMPRESS_PRECOMPILERS = (
-    ('text/x-scss', 'pysassc {infile} {outfile}'),
-    ('text/es-next', './node_modules/.bin/esbuild {infile} --bundle --minify --sourcemap --target=chrome58,firefox57,edge16,safari11 --outfile={outfile}'),
-)
+if env('DJANGO_DEVELOPMENT'):
+    COMPRESS_PRECOMPILERS = (
+        # default server first architecture
+        ('text/x-scss', 'pysassc {infile} {outfile}'),
+        ('text/x-script', './node_modules/.bin/esbuild {infile} --bundle --sourcemap --target=es2016 --outfile={outfile}'),
 
+        # SPA achitecture
+        ('text/es6', './node_modules/.bin/esbuild {infile} --bundle --sourcemap --target=es2016 --outfile={outfile}'),
+    )
+else:
+    COMPRESS_PRECOMPILERS = (
+        # default server first architecture
+        ('text/x-scss', 'pysassc {infile} {outfile}'),
+        ('text/x-script', './node_modules/.bin/esbuild {infile} --bundle --minify --target=es2016 --outfile={outfile}'),
+
+        # SPA architecture
+        ('text/es6', './node_modules/.bin/esbuild {infile} --bundle --minify --target=es2016 --outfile={outfile}'),
+    )
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

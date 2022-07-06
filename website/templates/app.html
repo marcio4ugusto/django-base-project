@@ -1,0 +1,17 @@
+{% load compress %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page Application architecture</title>
+    {% compress js %}
+    <script src="{% static 'app/main.tsx' %}" type="text/es6" defer></script>
+    {% endcompress %}
+</head>
+<body>
+    <noscript>Sorry, browser javascript support is disabled! This page requires it enabled to work.</noscript>
+    <div id="root"></div>
+</body>
+</html>

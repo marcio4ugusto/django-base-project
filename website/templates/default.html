@@ -1,0 +1,26 @@
+{% extends 'layouts/main.html' %}
+{% load compress %}
+{% load miscellaneous %}
+{% load static %}
+
+{% block content %}
+<main>
+    <h1>Hello,</h1>
+    <h2>Build an amazing Django app!</h2>
+    <footer>
+        <p>©{% year %} Licensed under <a href="https://opensource.org/licenses/MIT" target="_blank">MIT license</a>.</p>
+    </footer>
+</main>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    function sayHello() {
+        console.log('Hello from a HTML tag <script>!')
+    }
+    sayHello()
+</script>
+{% compress js %}
+<script src="{% static 'scripts/scripts.js' %}" type="text/x-script"></script>
+{% endcompress %}
+{% endblock %}
